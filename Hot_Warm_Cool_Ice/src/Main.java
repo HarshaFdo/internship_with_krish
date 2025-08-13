@@ -16,11 +16,18 @@ public class Main {
         int count = 0;
 
         while(true) {
+            count++;
+
             Scanner letter = new Scanner(System.in);
             System.out.println("Guess the letter:");
             String predictLetter = letter.nextLine().toUpperCase();
 
             int predictNumber = Arrays.asList(alphabet).indexOf(predictLetter);
+
+            if (predictNumber == -1) {
+                System.out.println("Invalid guess! Please enter A-Z only.");
+                continue;
+            }
 
             if (index == predictNumber) {
                 System.out.println("You are Right!");
@@ -34,8 +41,8 @@ public class Main {
             } else {
                 System.out.println("Ice");
             }
-            count++;
+
         }
-        System.out.println("You tried " +count +"times to get the right answer");
+        System.out.println("You tried " +count +" times to get the right answer");
     }
 }
