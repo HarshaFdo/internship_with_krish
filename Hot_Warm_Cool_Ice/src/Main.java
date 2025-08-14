@@ -11,7 +11,7 @@ public class Main {
                 "U", "V", "W", "X", "Y", "Z"};
         Random random = new Random();
         int index = random.nextInt(alphabet.length);
-        String randomLetter = alphabet[index];
+        String predictLetter = alphabet[index];
 
         int count = 0;
 
@@ -20,23 +20,23 @@ public class Main {
 
             Scanner letter = new Scanner(System.in);
             System.out.println("Guess the letter:");
-            String predictLetter = letter.nextLine().toUpperCase();
+            String guessLetter = letter.nextLine().toUpperCase();
 
-            int predictNumber = Arrays.asList(alphabet).indexOf(predictLetter);
+            int guessNumber = Arrays.asList(alphabet).indexOf(guessLetter);
 
-            if (predictNumber == -1) {
+            if (guessNumber == -1) {
                 System.out.println("Invalid guess! Please enter A-Z only.");
                 continue;
             }
 
-            if (index == predictNumber) {
+            if (index == guessNumber) {
                 System.out.println("You are Right!");
                 break;
-            } else if (abs(index - predictNumber) <= 3) {
+            } else if (abs(index - guessNumber) <= 3) {
                 System.out.println("Hot");
-            } else if (abs(index - predictNumber) > 3 && abs(index - predictNumber) <= 6) {
+            } else if (abs(index - guessNumber) > 3 && abs(index - guessNumber) <= 6) {
                 System.out.println("Warm");
-            } else if (abs(index - predictNumber) > 6 && abs(index - predictNumber) <= 9) {
+            } else if (abs(index - guessNumber) > 6 && abs(index - guessNumber) <= 9) {
                 System.out.println("Cool");
             } else {
                 System.out.println("Ice");
