@@ -22,12 +22,17 @@ public class Main {
             System.out.println("Guess the letter:");
             String guessLetter = letter.nextLine().toUpperCase();
 
-            int guessNumber = Arrays.asList(alphabet).indexOf(guessLetter);
-
-            if (guessNumber == -1) {
-                System.out.println("Invalid guess! Please enter A-Z only.");
+            if (!Arrays.asList(alphabet).contains(guessLetter)) {
+                System.out.println("Invalid input! Please enter a letter A-Z.");
                 continue;
             }
+
+            int guessNumber = Arrays.asList(alphabet).indexOf(guessLetter);
+
+//            if (guessNumber == -1) {
+//                System.out.println("Invalid guess! Please enter A-Z only.");
+//                continue;
+//            }
 
             if (index == guessNumber) {
                 System.out.println("You are Right!");
