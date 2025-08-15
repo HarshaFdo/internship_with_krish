@@ -19,7 +19,7 @@ public class Main {
             count++;
 
             Scanner letter = new Scanner(System.in);
-            System.out.println("Guess the letter:");
+            System.out.print("Guess the letter:");
             String guessLetter = letter.nextLine().toUpperCase();
 
             if (!Arrays.asList(alphabet).contains(guessLetter)) {
