@@ -29,11 +29,6 @@ public class Main {
 
             int guessNumber = Arrays.asList(alphabet).indexOf(guessLetter);
 
-//            if (guessNumber == -1) {
-//                System.out.println("Invalid guess! Please enter A-Z only.");
-//                continue;
-//            }
-
             if (index == guessNumber) {
                 System.out.println("You are Right!");
                 break;
