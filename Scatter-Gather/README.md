@@ -31,14 +31,14 @@ docker run -d --name allocation-service --network scatter-net -p 3002:3000 alloc
 docker run -d --name logistic-service --network scatter-net -p 3004:3000 logistic-service
 docker run -d --name caller-service --network scatter-net -p 3000:3000 caller-service
 
-4. Test services
-curl.exe "http://localhost:3001/rate?company=ABC"
-curl.exe "http://localhost:3002/allocation?company=ABC"
-curl.exe "http://localhost:3003/logistic?company=ABC"
-curl.exe "http://localhost:3000/aggregate?company=ABC"
+4. Test services(git bash)
+curl http://localhost:3001/rate?company=ABC
+curl http://localhost:3002/allocation?company=ABC
+curl http://localhost:3003/logistic?company=ABC
+curl http://localhost:3000/aggregate?company=ABC
 
 Caller Service returns combined JSON from all services:
-Example Output: 
+Example Output(in JSON format): 
   {
   "company": "ABC",
   "time": "29/09/2025, 20:35:12",
