@@ -17,13 +17,13 @@ All services are connected via a user-defined Docker bridge network (scatter-gat
 Setup & Run:
 
 1. Build Docker images
-- docker build -t rate-service ./service-rate
-- docker build -t allocation-service ./service-allocation
-- docker build -t logistic-service ./service-logistic
+- docker build -t rate-service ./rate-service
+- docker build -t allocation-service ./allocation-service
+- docker build -t logistic-service ./logistic-service
 - docker build -t caller-service ./caller-service
 
 2. Create a user-defined bridge network
-docker network create -d bridge scatter-gather
+- docker network create -d bridge scatter-gather
 
 3. Run containers and connect to the UDB
 - docker run -d --name rate-service --network scatter-gather -p 3001:3000 rate-service
