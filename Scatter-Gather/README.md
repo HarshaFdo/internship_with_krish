@@ -34,10 +34,10 @@ docker network create -d bridge scatter-gather
 4. Test services(git bash)
 - curl http://localhost:3001/rate?company=ABC
 - curl http://localhost:3002/allocation?company=ABC
-- curl http://localhost:3003/logistic?company=ABC
+- curl http://localhost:3004/logistic?company=ABC
 - curl http://localhost:3000/aggregate?company=ABC
 
-Caller Service returns combined JSON from all services:
+Caller Service returns a combined JSON from all services:
 
 - Example Output(in JSON format): 
 
