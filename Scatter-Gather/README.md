@@ -26,10 +26,10 @@ Setup & Run:
 docker network create -d bridge scatter-gather
 
 3. Run containers and connect to the UDB
-- docker run -d --name rate-service --network scatter-net -p 3001:3000 rate-service
-- docker run -d --name allocation-service --network scatter-net -p 3002:3000 allocation-service
-- docker run -d --name logistic-service --network scatter-net -p 3004:3000 logistic-service
-- docker run -d --name caller-service --network scatter-net -p 3000:3000 caller-service
+- docker run -d --name rate-service --network scatter-gather -p 3001:3000 rate-service
+- docker run -d --name allocation-service --network scatter-gather -p 3002:3000 allocation-service
+- docker run -d --name logistic-service --network scatter-gather -p 3004:3000 logistic-service
+- docker run -d --name caller-service --network scatter-gather -p 3000:3000 caller-service
 
 4. Test services(git bash)
 - curl http://localhost:3001/rate?company=ABC
